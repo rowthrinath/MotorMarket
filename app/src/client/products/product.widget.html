@@ -1,13 +1,49 @@
 
 <ul class="tab">
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Motoring')">Motoring</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'News')">News</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Services')">Services</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'EngineOil')" id="defaultOpen">Engine Oil</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Brakes')">Brakes</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Batteries')">Batteries</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Bulbs')">Bulbs</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Wheels')">Wheels</a></li>
+	<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Gears')">Gears</a></li>
+	<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Lubrication')">Lubrication</a></li>
 </ul>
 
-<div id="Motoring" class="tabcontent">
-  <h3>Motoring</h3>
-  <div class="motoring">
+<div id="EngineOil" class="tabcontent">
+  <h3>Engine Oil</h3>
+  <div class="EngineOil">
+  <img src="" alt="" style="width:200%">
+  <div class="container">
+    <div class="col-md-4" ng-repeat="product in products">
+		<div class="panel panel-primary">
+			<div class="panel-heading">{{product.name}}</div>
+				
+				<div class="panel-body">
+						<h4>
+							Product Name:{{product.name}}
+							<br>
+							Price: £ {{ product.price }}
+							<span>
+							<img ng-src="{{product.image}}"></img>
+						</h4>
+						<div>
+							<button class="btn btn-primary" ng-click="buyme(product)">View Details</button>
+							<button class="btn btn-primary" ng-click="buyme(product)">Add to cart</button>
+							
+
+						</div>
+					</div>
+
+				</div>
+	</div>
+  </div>
+</div>
+</div>
+ 
+
+<div id="Brakes" class="tabcontent">
+  <h3>Brakes</h3>
+<div class="Brakes">
   <img src="" alt="" style="width:200%">
   <div class="container">
     <div class="col-md-4" ng-repeat="product in products">
@@ -24,7 +60,7 @@
 				</h4>
 				<div>
 					<button class="btn btn-primary" ng-click="buyme(product)">View Details</button>
-					<button class="btn btn-primary" ng-click="buyme(product)">Buy me</button>
+					<button class="btn btn-primary" ng-click="buyme(product)">Add to cart</button>
 
 				</div>
 		</div>
@@ -34,17 +70,13 @@
   </div>
 </div>
 
- 
-
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>News</p> 
-</div>
-
 <div id="Services" class="tabcontent">
   <h3>Services</h3>
   <p>Services</p>
 </div>
+
+
+
 
 
 
