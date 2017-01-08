@@ -35,6 +35,8 @@ li.dropdown {
     display: block;
     text-align: left;
 }
+
+
 /* Style the list */
 ul.tab {
     list-style-type: none;
@@ -57,9 +59,9 @@ ul.tab li a {
     font-size: 17px;
 }
 /* Change background color of links on hover */
-ul.tab li a:hover {background-color: #ddd;}
+ul.tab li a:hover {background-color: #EE5959;}
 /* Create an active/current tablink class */
-ul.tab li a:focus, .active {background-color: #ccc;}
+ul.tab li a:focus, .active {background-color: #EE5959;}
 /* Style the tab content */
 .tabcontent {
     display: none;
