@@ -70,3 +70,5 @@ ul.tab li a:focus, .active {background-color: #EE5959;}
     border-top: none;
 }
    
+.w3-sidenav a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}

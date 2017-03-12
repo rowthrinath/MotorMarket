@@ -1,4 +1,5 @@
 
+
 <ul class="tab">
   <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'EngineOil')" id="defaultOpen">Engine Oil</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Brakes')">Brakes</a></li>
@@ -9,86 +10,50 @@
 	<li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Lubrication')">Lubrication</a></li>
 </ul>
 
+
+
 <div id="EngineOil" class="tabcontent">
   <h3>Engine Oil</h3>	
-
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Castrol</a></li>
-    <li><a data-toggle="tab" href="#menu1">Shell</a></li>
-  </ul>
-
-  <div id="Castrol" class="tabcontent">
-  <h3>Castrol</h3>
-  </div>
-
-  <img src="" alt="" style="width:200%">
+  <img src="{{product.image}}" alt="" style="width:50%">
   <div class="container">
     <div class="col-md-4" ng-repeat="product in products">
-		<div class="panel panel-primary">
-				<div class="panel-heading">{{product.name}}</div>
-				
-					<div class="panel-body">
-						<h4>
-							Product Name:{{product.name}}
-							<br>
-							Price: £ {{ product.price }}
-							<span>
-							<img ng-src="{{product.image}}"></img>
-						</h4>
-						<div>
-							<button class="btn btn-primary" ng-click="buyme(product)">View Details</button>
-							<button class="btn btn-primary" ng-click="buyme(product)">Add to cart</button>
-							
+      <div class="panel panel-primary">
+          <div class="panel-heading">{{product.name}}</div>
+          
+            <div class="panel-body">
+              <h4>
+                Product Name:{{product.name}}
+                <br>
+                Price: £ {{ product.price }}
+                <span><br>
+                <img src="{{product.image}}" > </img>
+              </h4>
+          <button class="btn btn-primary" onclick="onClick(this)" 
+              >View more details</button>
+              </div>
 
-						</div>
-					</div>
+            </div>
+            
+  
 
+                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                  <span class="w3-closebtn w3-hover-red w3-text-white w3-xxlarge w3-container w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                    <img id="img01" style="width:100%">
+                    
+                    <img src="{{product.image}}" > </img>
+                    </div>
+                  </div>
+
+
+
+          </div>
+          
 				</div>
-		</div>
+        
+    </div>
+    
   </div>
+  
 </div>
-
-
-
-
- 
-
-<div id="Brakes" class="tabcontent">
-  <h3>Brakes</h3>
-<div class="Brakes">
-  <img src="" alt="" style="width:200%">
-  <div class="container">
-    <div class="col-md-4" ng-repeat="product in products">
-	<div class="panel panel-primary">
-		<div class="panel-heading">{{product.name}}</div>
-		
-		<div class="panel-body">
-				<h4>
-					Product Name:{{product.name}}
-					<br>
-					Price: £ {{ product.price }}
-					<span>
-					<img ng-src="{{product.image}}"></img>
-				</h4>
-				<div>
-					<button class="btn btn-primary" ng-click="buyme(product)">View Details</button>
-					<button class="btn btn-primary" ng-click="buyme(product)">Add to cart</button>
-
-				</div>
-		</div>
-
-	</div>
-</div>
-  </div>
-</div>
-
-<div id="Services" class="tabcontent">
-  <h3>Services</h3>
-  <p>Services</p>
-</div>
-
-
-
-
-
 
